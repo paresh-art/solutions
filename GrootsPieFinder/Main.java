@@ -5,12 +5,13 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+
 
     public static void rec(ArrayList<Integer> arr,ArrayList<Integer> curr,int id, int sum, int target){
         if(id>=arr.size() || sum == target){
             if(sum == target){
-                ans.add(curr);
+
+                System.out.println(curr);
             }
             return;
         }
@@ -31,13 +32,17 @@ public class Main {
         ArrayList<Integer> curr = new ArrayList<>();
 
         rec(arr,curr,0,0,target);
-        System.out.println(ans);
     }
 
     public static void main(String args[]){
 
-
-
-
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(2);
+        arr.add(1);
+        pieFinder(arr,6);
+        
     }
 }
